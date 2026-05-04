@@ -16,3 +16,5 @@ An interactive web application designed for high-throughput screening (HTS) work
 
 ## Background
 Developed for use in translational science research to streamline compound screening workflows and ensure consistency in high-density plate layouts.
+---
+*Made by Colin Gordy*
