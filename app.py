@@ -258,15 +258,24 @@ def server(input, output, session: Session):
         
         fig.update_layout(
             xaxis=dict(
-    tickmode='array', 
-    tickvals=list(range(1, 49)), 
-    ticktext=[str(i) for i in range(1, 49)], 
-    side='top',
-    tickangle=0, 
-    tickfont=dict(size=10)
-),
-            yaxis=dict(tickmode='array', tickvals=list(range(32, 0, -1)), ticktext=all_rows),
-            plot_bgcolor='white', margin=dict(l=40, r=40, t=40, b=40), height=750, 
+                tickmode='array', 
+                tickvals=list(range(1, 49)), 
+                ticktext=[str(i) for i in range(1, 49)], 
+                side='top', 
+                tickangle=0, 
+                tickfont=dict(size=10)
+            ),
+            yaxis=dict(
+                tickmode='array', 
+                tickvals=list(range(32, 0, -1)), 
+                ticktext=all_rows,
+                scaleanchor="x", 
+                scaleratio=1
+            ),
+            width=1100,  # Forces the plate to stay wide
+            height=700,  # Forces the height
+            plot_bgcolor='white', 
+            margin=dict(l=50, r=50, t=80, b=50), 
             dragmode="select" 
         )
         fig.update_yaxes(scaleanchor="x", scaleratio=1)
